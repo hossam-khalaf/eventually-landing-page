@@ -1,5 +1,5 @@
 # eventually-landing-page
-
+  Responsive simple landingpage with CSS and a bit of JS
 
 ### Screenshot
 
