@@ -1,0 +1,163 @@
+:root {
+	--font: 'KFOlCnqEu92Fr1MmWUlfBBc4AMP6lQ', sans-serif;
+	--black: #000000;
+	--green: #1cb495;
+	--white: #ffffff;
+	--opacity: 0.4;
+	--transition: all 0.2s ease-in-out;
+}
+
+html,
+* {
+	font-family: var(--font);
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	position: relative;
+	color: var(--white);
+	background-image: url(images/bg-01.jpg);
+	background-size: cover;
+	background-position: center bottom;
+	box-shadow: inset 0px 1000px 10000px rgba(0, 0, 0, 0.8);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main {
+}
+
+h1,
+p {
+	display: none;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+form input,
+form button {
+	width: 80vw;
+	background-color: transparent;
+	padding: 0.5rem 1rem;
+	border-radius: 5px;
+	color: var(--white);
+}
+
+form input {
+	border: 1px solid var(--white);
+	margin-bottom: 1rem;
+	opacity: var(--opacity);
+}
+
+input::placeholder {
+	color: var(--white);
+}
+
+form button {
+	border: none;
+	background-color: var(--green);
+	text-transform: capitalize;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.thanks {
+	font-size: 14px;
+	color: var(--green);
+	margin-left: 1rem;
+	margin-top: 0.5rem;
+}
+
+footer {
+	position: absolute;
+	bottom: 1.5rem;
+	left: 1rem;
+	opacity: var(--opacity);
+}
+
+.social {
+	margin-bottom: 1rem;
+}
+
+.social i {
+	cursor: pointer;
+	margin-right: 0.5rem;
+	transition: var(--transition);
+}
+
+.social i:hover {
+	color: var(--green);
+	transform: scale(1.1);
+}
+
+.rights a {
+	color: var(--white);
+	text-decoration: underline dotted var(--white);
+	transition: var(--transition);
+}
+
+.rights a:hover {
+	color: var(--green);
+}
+
+/*Desktop styles  */
+
+@media (min-width: 48em) {
+	body {
+		background-position: left;
+		justify-content: left;
+	}
+
+	main {
+		margin-left: 3vw;
+		width: 50vw;
+	}
+
+	h1,
+	p {
+		display: block;
+		padding-right: 5vw;
+		margin-bottom: 1rem;
+	}
+	p.thanks {
+		display: none;
+	}
+
+	h1 {
+		font-size: 3.25rem;
+	}
+
+	p {
+		opacity: var(--opacity);
+		width: 80%;
+	}
+
+	footer {
+		left: 3vw;
+	}
+
+	form {
+		flex-direction: row;
+	}
+
+	form input,
+	form button {
+		width: auto;
+	}
+
+	form button {
+		padding: 0;
+		margin-left: 1rem;
+		display: inline-block;
+		width: 4.5rem;
+		height: 2rem;
+	}
+}
